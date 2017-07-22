@@ -1,0 +1,29 @@
+HATS@LPC 2016	RGS Tutorial
+----------------------------
+1. GOAL
+
+The goal is to separate
+
+    gg -> H -> ZZ -> 4mu (ggF)
+    VV -> H -> ZZ -> 4mu (VBF)
+    
+using box cuts.
+
+We assume a data set of 300/fb. The cross section x BR for gg is 1.5 fb, and 0.13 fb for VV.
+
+2. SETUP
+
+   source setup.sh  (for a bash shell)
+   	  OR
+   source setup.csh (for a non-bash shell)
+
+3. TESTING
+
+Examine a large number of box cuts and save the results to a root file:
+
+    python train.py
+
+Then do a bit of analysis on these results
+
+    python analyze.py
+   

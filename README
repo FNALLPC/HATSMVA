@@ -1,0 +1,21 @@
+HATS@LPC 2016 June 9
+--------------------
+The goal is to separate
+
+    gg -> H -> ZZ -> 4mu (ggF)
+    VV -> H -> ZZ -> 4mu (VBF)
+
+and measure the VBF cross section at 13 TeV, first using the
+2.8/fb of real 4mu data, then assuming a data set of 300/fb 
+
+The cross section x BR for ggF is 1.5 fb, and 0.13 fb for VBF.
+
+Tutorial
+--------
+0_start		Look at a variety of potential discriminating variables
+1_onesided	Use the random grid search (RGS) to find the best one-sided cuts
+2_box		Use RGS to find the best box cut
+3_ladder	Use RGS to find the best ladder cut
+4_nonlinear	Use boosted decision trees and neural networks to find best cuts
+5_analysis	Construct likelihood function and measure cross section
+

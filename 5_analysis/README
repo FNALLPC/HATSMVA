@@ -1,0 +1,45 @@
+HATS@LPC 2016	RGS Tutorial
+----------------------------
+1. GOAL
+
+Perform a single-count statistical analysis of
+
+    gg -> H -> ZZ -> 4mu (gg)
+    VV -> H -> ZZ -> 4mu (VV)
+    
+in which the gg and ZZ contributions are considered backgrounds B1 and B2
+to VV.
+
+Assume a data set of 300/fb. The cross section x BR for gg is 1.5 fb,
+and 0.13 fb for VV.
+
+2. ANALYSIS STEPS
+
+ 1. Make trees that contain the results of task 4, namely, the MLP and BDT
+ functions:
+
+  ./maketree.py ../data/ntuple_4mu_gg.root
+  ./maketree.py ../data/ntuple_4mu_VV.root
+  ./maketree.py ../data/ntuple_4mu_bkg.root	  
+
+ The samples are scaled to an integrated luminosity of 300/fb. Feel free to
+ change this in maketree.py if you wish.
+ 
+ 2. Make a simulated data set from the results of the previous step
+ 
+  ./makesimdata.py
+
+ 3. Apply your cuts to the two discriminants (see placeholder in applycuts.py)
+ 
+  ./applycuts.py
+
+ 4. Edit dostats.py. Write the results of applycuts in the appropriate place.
+ (Assume, for example, a 5-10% uncertainty in the signal and background
+ estimates.) Then do
+ 
+  ./createworkspace.py   to build statistical model and write it to
+  			 HATsworkspace.root
+  ./analyzeworkspace.py	 to run statistical analysis on model
+
+ Read through these programs and try to understand what they are doing.
+  
