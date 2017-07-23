@@ -18,4 +18,4 @@ Tutorial
 3_ladder	Use RGS to find the best ladder cut
 4_nonlinear	Use boosted decision trees and neural networks to find best cuts
 5_analysis	Construct likelihood function and measure cross section
-
+6_keras     Use modern machine learning libraries, like keras, to build a neural network
