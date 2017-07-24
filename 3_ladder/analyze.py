@@ -228,7 +228,18 @@ def main():
     cmass.cd()
     hsig.Draw('p')
     hbkg.Draw('p same')
-    outerHull.draw()
+#    print "\t outerHull(0): \n"
+#    print outerHull(0)
+    for ii, color in [(0,    kBlack),
+                      (1000, kBlue),
+                      (1500, kOrange+2)]:
+        # draw outer full of specified ladder cut
+        cut = outerHull(0)
+        # plots final cuts
+        outerHull.draw(cut, hullcolor=color, plotall=False)
+        # plots all the cuts
+        # outerHull.draw(cut, hullcolor=color, plotall=True)        
+        cmass.Update()     
 
     croc.SaveAs(".png")    
     cmass.SaveAs('.png')
